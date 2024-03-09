@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-fluid">
         <div class="d-flex container-img">
-            <a href="#" class="navbar-brand">
+            <a href="/" class="navbar-brand">
                 <img src="{{ asset('img/logo.svg') }}" alt="logo" width="100" height="100">
             </a>
         </div>

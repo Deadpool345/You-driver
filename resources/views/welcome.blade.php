@@ -6,11 +6,11 @@
         <link rel="dns-prefetch" href="//fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-        <!-- Fonts -->
+        Fonts 
         <link rel="dns-prefetch" href="//fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-        <!-- Scripts -->
+        Scripts 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         <title>You Driver</title>
     </head>
@@ -18,4 +18,4 @@
         @include('components.navbar')
         
     </body>
-</html> -->
+</html>-->
