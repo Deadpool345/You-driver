@@ -6,8 +6,8 @@
                 <img src="{{ asset('img/logo.svg') }}" alt="logo" width="100" height="100">
             </a>
         </div>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+        <button type="button" class="navbar-toggler bg-secondary" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon "></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarCollapse">
             <div class="navbar-nav mx-auto">

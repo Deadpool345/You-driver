@@ -1,3 +1,7 @@
+.marcas{
+  color: #f8fafc;
+  text-align: center;
+}
 // Body
 $body-bg: #f8fafc;
 
@@ -7,6 +11,7 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 $primary: #2E3840;
 $secondary: #F9DBBB;
+
 
 
 //configurar cosas necesarias
@@ -88,8 +93,54 @@ $secondary: #F9DBBB;
   }
 
   
+
+//cartas de carros disponibles
+
+.card{
+  height: 72%;
+  width: 72%;
+
+}
+
+//boton de ver mas
+.botonvermas{
+  text-align: center;
+}
 .linea{
     height: .2rem;
     width: 50%;
     background-color: #F9DBBB;
+}
+.linea2{
+  height: .1rem;
+  width: 100%;
+  background-color: #F9DBBB;
+}
+.linea3{
+  height: .1rem;
+  width: 20%;
+  background-color: #F9DBBB;
+}
+.linea4{
+  height: .1rem;
+  width: 25%;
+  background-color: #F9DBBB;
+}
+//Scroll Bar
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2E3840;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F9DBBB;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d5bfa8;
 }
