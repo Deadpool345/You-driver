@@ -17,7 +17,7 @@
                 <a href="#" class="nav-item nav-link text-secondary ">Contacto</a>
             </div>
             <div class="navbar-nav ">
-                <a href="#" class="nav-item boton" style="margin-rigth:2rem;">Registrarse</a>
+                <a href="{{ url('/register') }}" class="nav-item boton" style="margin-rigth:2rem;">Registrarse</a>
             </div>
         </div>
     </div>

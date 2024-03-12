@@ -12,6 +12,10 @@ $line-height-base: 1.6;
 $primary: #2E3840;
 $secondary: #F9DBBB;
 
+//margin
+.mt-2{
+  margin-top: 2rem;
+}
 
 
 //configurar cosas necesarias
@@ -116,6 +120,11 @@ $secondary: #F9DBBB;
   width: 100%;
   background-color: #F9DBBB;
 }
+.linea-footer{
+  height: .1rem;
+  width: 100%;
+  background-color: #2E3840;
+}
 .linea3{
   height: .1rem;
   width: 20%;
@@ -162,3 +171,51 @@ $secondary: #F9DBBB;
   height: 70%;
   border-radius: 2rem;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0
+}
+
+ul>li {
+  padding: 4px;
+  color:#C5CAE9;
+}
+
+ul>li:hover {
+  color: #957bda;
+  cursor: pointer
+}
+
+hr {
+  border-width: 3px
+}
+
+.card {
+  padding: 2% 7%
+}
+
+.social>i {
+  padding: 1%;
+  font-size: 15px
+}
+
+.social>i:hover {
+  color: #957bda;
+  cursor: pointer
+}
+
+.policy>div {
+  padding: 4px
+}
+
+.heading {
+  font-family: 'Titillium Web', sans-serif;
+  color: black;
+}
+
+.divider {
+  border-top: 2px solid
+}
+
