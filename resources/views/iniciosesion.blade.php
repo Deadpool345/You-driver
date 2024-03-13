@@ -14,6 +14,7 @@
     
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link rel="shortcut icon" type="image/svg" href="{{ asset('img/logo-ico.svg') }}">
 
     <title>You Driver</title>
 
@@ -85,11 +86,18 @@
             margin-top: 4rem;
         }
         .content{
-            width:80rem;
+            width:85rem;
+        }
+
+        .content-img{
+            width:50%;
+            background-image: url('img/fondos/register.png');    
+            background-size: cover; /* ajusta el tamaño de la imagen para cubrir completamente el fondo */
+            background-position: center;
         }
 
         .img-login{
-            width:628px;
+            width:670px;
         }
 
         @media (max-width: 992px) {
@@ -165,7 +173,7 @@
                 </form>
             </div>
             <div class="col-lg-6 d-flex align-items-center content-img">
-                <img class="img-login" src="{{ asset('img/fondos/register.png') }}" alt="Hero Image"  style="height:35rem;">
+                <!-- <img class="img-login" src="{{ asset('img/fondos/register.png') }}" alt="Hero Image"  style="height:35rem;"> -->
             </div>
         </div>
     </div>

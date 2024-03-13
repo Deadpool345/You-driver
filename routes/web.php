@@ -18,7 +18,7 @@
     });
 
 
-    Route::get('/iniciosesion', function () {
+    Route::get('/login', function () {
         return view('iniciosesion');
     });
     Route::get('/register', function () {

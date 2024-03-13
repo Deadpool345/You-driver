@@ -12,6 +12,8 @@
     
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link rel="shortcut icon" type="image/svg" href="{{ asset('img/logo-ico.svg') }}">
+
     
     <title>You Driver</title>
 
