@@ -146,7 +146,7 @@
     <div class="container-fluid content mt-5 bg-white rounded-0 " style="margin-bottom:8rem;">
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center content-img ">
-                <!-- <img class="img-login" src="{{ asset('img/fondos/login.png') }}" alt="Hero Image"  style="height:32rem;"> -->
+                 <img class="img-login" src="{{ asset('img/fondos/login.png') }}" alt="Hero Image"  style="height:32rem; width:47rem;">
             </div>
             <div class="col-lg-6 ">
                 
