@@ -27,6 +27,10 @@
     Route::get('/restablecercontra', function () {
         return view('restablecercontra');
     });
+    Route::get('/contact', function () {
+        return view('contacto');
+    });
+
 
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

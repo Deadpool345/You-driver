@@ -14,7 +14,7 @@
                 <a href="{{ url('/') }}" class="nav-item nav-link text-secondary">Inicio</a>
                 <a href="#" class="nav-item nav-link text-secondary">Catalogo</a>
                 <a href="#" class="nav-item nav-link text-secondary">Sobre Nosotros</a>
-                <a href="#" class="nav-item nav-link text-secondary ">Contacto</a>
+                <a href="{{ url('/contact') }}" class="nav-item nav-link text-secondary ">Contacto</a>
             </div>
             <div class="navbar-nav ">
                 <a href="{{ url('/register') }}" class="nav-item boton" style="margin-rigth:2rem;">Registrarse</a>

@@ -16,32 +16,26 @@
     <title>You Driver</title>
 </head>
 <body class="bg-primary">
-    <!--navbar-->
-    <!--EL NAVBAR Y EL FOOTER SE MANDAN A LLAMAR, YA QUE SON COMPONENTES-->
+
     @include('components.navbar')
-<br>
-<br>
-<br>
-<div class="bg-white">
-    <form>
-        <div class="mb-3">
-            <br>
-         <h3>Ingrese su correo electronico para restablecer su contraseña</h3>
+
+    <div class="bg-white">
+    <div class="container mt-5 pt-5 pb-5">
+        <div class="mb-5">
+            <h3>Ingrese su correo para cambiar la contraseña</h3>
         </div>
-        <br>
-        <div class="mb-3">
-            <br>
-          <label class="form-label">CORREO ELECTRONICO</label>
-          <br>
-          <input type="emailr" class="form-control" placeholder="correo@gmail.com">
+        <form action="#">
+        <div class="mb-3 d-flex justify-content-center align-items-center">
+            <input type="email" class="form-control w-75" id="email" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico">
         </div>
-        <br>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-        <br>
-        <img src="https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2018/01/22/5f16082f23594.jpeg" alt="">
-      </form>
-      <br>
-</div>
+
+        <div class="d-flex justify-content-end mt-5">
+                <button type="submit" class="btn btn-primary text-secondary boton ">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    </div>
 
 </body>
 @include('components.footer')

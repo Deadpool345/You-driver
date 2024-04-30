@@ -19,127 +19,154 @@
     <title>You Driver</title>
 
     <style>
-        .get-in-touch {
-            width: 1080px;
-            margin: auto;
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .side-image{
+            background-image: url("'../../img/fondos/register.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 10px 0 0 10px;
             position: relative;
         }
-
-        .get-in-touch .title {
-            text-align: center;
-            font-size: 3.2em;
-            line-height: 48px;
-            padding-bottom: 48px;
+        .contenedor{
+        width:  900px;
+        height:30rem;
+        border-radius: 10px;
+        background: #fff;
+        padding: 0px;
+        box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
         }
-
-        .contact-form .form-field {
-            position: relative;
-            margin: 32px 0;
-        }
-
-        .contact-form .input-text {
-            display: block;
-            width: 30rem;
-            height: 36px;
-            border-width: 0 0 2px 0;
-            border-color: #2E3840;
-            font-size: 18px;
-            line-height: 26px;
-            font-weight: 400;
-        }
-
-        .contact-form .input-text:focus {
-            outline: none;
-        }
-
-        .contact-form .input-text:focus+.label,
-        .contact-form .input-text.not-empty+.label {
-            -webkit-transform: translateY(-24px);
-            transform: translateY(-24px);
-        }
-
-        .contact-form .label {
+        .text{
             position: absolute;
-            left: 5px;
-            bottom: 11px;
-            font-size: 18px;
-            line-height: 26px;
-            font-weight: 400;
-            color: #2E384;
-            cursor: text;
-            transition: -webkit-transform .2s ease-in-out;
-            transition: transform .2s ease-in-out;
-            transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .text p{
+            color: #fff;
+            font-size: 20px; 
+        }
+        
+        .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        }
+        .input-box{
+        width: 330px;
+        box-sizing: border-box;
+        }
+        
+        .input-box header{
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .input-field{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 0 10px 0 10px;
+        }
+        .input{
+            height: 45px;
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            outline: none;
+            margin-bottom: 20px;
+            color: #40414a;
+        }
+        .input-box .input-field label{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .input-field input:focus ~ label
+        {
+            top: -10px;
+            font-size: 13px;
+        }
+        .input-field input:valid ~ label
+        {
+        top: -10px;
+        font-size: 13px;
+        color: #5d5076;
+        }
+        
+        .submit{
+            border: none;
+            outline: none;
+            height: 45px;
+            background: #ececec;
+            border-radius: 5px;
+            transition: .4s;
         }
 
         .submit-btn {
-            font-family: san-serif, 'Poppins';
             background-color: #2E3840;
             color: #F9DBBB;
-            font-size: 1.2rem;
-            padding: 8px 16px;
+            font-size: 1rem;
+            
             border: none;
-            width: 10rem;
+            width: 8rem;
             height: 3.5rem;
             cursor: pointer;
             border-radius: 1rem;
-            margin-top: 4rem;
-        }
-        .content{
-            width:85rem;
-        }
-
-        .content-img{
-            width:50%;
-            background-image: url('img/fondos/register.png');    
-            background-size: cover; /* ajusta el tamaño de la imagen para cubrir completamente el fondo */
-            background-position: center;
-        }
-
-        .img-login{
-            width:670px;
-        }
-
-        @media (max-width: 992px) {
-            .content{
-                width:auto;
-            }
-
-            .img-login{
-                width: 100%;
-                height: 100%;
-            }
-
-            .content-img{
-                width: 100%;
-            }
             
-            .row {
-                flex-direction: column;
-            }
+        }
 
-            .col-lg-6 {
-                width: 100%;
+        .form-field {
+            position: relative;
+            margin: 32px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        span a{
+            text-decoration: none;
+            font-weight: 700;
+            color: #000;
+            transition: .5s;
+        }
+        span a:hover{
+            text-decoration: underline;
+            color: #000;
+        }
+        @media only screen and (max-width: 768px){
+            .side-image{
+                border-radius: 10px 10px 0 0;
             }
-
-            .contact-form {
-                width: 100%;
+            img{
+                width: 35px;
+                position: absolute;
+                top: 20px;
+                left: 47%;
             }
-
-            .contact-form .form-field {
-                margin: 16px 0;
+            .text{
+                position: absolute;
+                top: 70%;
+                text-align: center;
             }
-
-            .contact-form .input-text {
-                width: 100%;
+            .text p, i{
+                font-size: 16px;
             }
-
-            .contact-form .label {
-                left: 0;
-                bottom: 0;
-            }
-
-            .contact-form .submit-btn {
+            .row{
+                max-width:420px;
                 width: 100%;
             }
         }
@@ -147,33 +174,32 @@
 </head>
 
 <body class="bg-primary">
-    <!--navbar-->
-    <!--EL NAVBAR Y EL FOOTER SE MANDAN A LLAMAR, YA QUE SON COMPONENTES-->
+
     @include('components.navbar')
 
-    <div class="container-fluid content mt-5 bg-white rounded-0">
-        <div class="row">
-            <div class="col-lg-6 ">
-                <h1 class="mt-5">¡Bienvenido de vuelta!</h1>
-                <form class="contact-form  d-flex flex-column justify-content-center align-items-center mt-5">
-                    <div class="form-field  ">
-                        <input id="name" class="input-text js-input" type="text" required>
-                        <label class="label" for="name">Nombre de usuario</label>
-                    </div>
+    <div class="container main">
+        <div class="contenedor row">
+            <div class="col-md-6 side-image"></div>
+            <div class="col-md-6 right pt-5">
+                <div class="input-box">
+                <h3 class="text-center mb-5">¡Bienvenido de vuelta!</h3>
+                <div class="input-field mb-3">
+                        <input type="text" class="input" id="email" required="" autocomplete="off">
+                        <label for="email">Nombre de usuario:</label> 
+                    </div> 
+                    <div class="input-field">
+                        <input type="password" class="input" id="pass" required="">
+                        <label for="pass">Contraseña:</label>
+                    
+                    </div> 
                     <div class="form-field">
-                        <input id="email" class="input-text js-input" type="password" required>
-                        <label class="label" for="email">Contraseña</label>
-                    </div>
-                    <div>
-                        <small class="form-field"><a href="{{ url('/restablecercontra') }}" class="text-decoration-none">¿Olvidaste tu contraseña?</a></small>
-                    </div>
+                        
+                        <input type="submit" class="submit-btn" value="Iniciar Sesión">
+                    </div> 
                     <div class="form-field">
-                        <input class="submit-btn" type="submit" value="Iniciar Sesion">
+                    <span><a href="{{ url('/restablecercontra') }}">¿Olvidaste la contraseña?</a></span>
                     </div>
-                </form>
-            </div>
-            <div class="col-lg-6 d-flex align-items-center content-img">
-                <!-- <img class="img-login" src="{{ asset('img/fondos/register.png') }}" alt="Hero Image"  style="height:35rem;"> -->
+                </div>  
             </div>
         </div>
     </div>
