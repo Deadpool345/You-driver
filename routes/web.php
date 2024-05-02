@@ -31,6 +31,14 @@
         return view('contacto');
     });
 
+    Route::get('/catalogo', function () {
+        return view('catalogo');
+    });
+
+    Route::get('/about', function () {
+        return view('aboutus');
+    });
+
 
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

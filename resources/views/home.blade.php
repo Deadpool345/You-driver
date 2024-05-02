@@ -87,9 +87,9 @@
           <img src="{{ asset('img/fondos/about.png') }}" class="img-fluid" alt="About Us Image">
         </div>
         <div class="col-md-6 p-5 text-justify">
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, quam ut dapibus dignissim, odio justo eleifend nulla, non tempor mi libero ac odio. Duis quis scelerisque eros. Fusce sit amet mi eu libero suscipit rutrum.Integer vitae urna vel enim placerat congue vel a mi. Sed eget risus pulvinar, malesuada elit eget, convallis nulla. Fusce semper libero vitae dui fermentum, quis scelerisque odio dapibus. Integer vitae urna vel enim placerat congue vel a mi. Sed eget risus pulvinar, malesuada elit eget, convallis nulla. Fusce semper libero vitae dui fermentum, quis scelerisque odio dapibus.</p>
-          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, quam ut dapibus dignissim, odio justo eleifend nulla, non tempor mi libero ac odio. Duis quis scelerisque eros. Fusce sit amet mi eu libero suscipit rutrum.Integer vitae urna vel enim placerat congue vel a mi. Integer vitae urna vel enim placerat congue vel a mi. Sed eget risus pulvinar, malesuada elit eget, convallis nulla. Fusce semper libero vitae dui fermentum, quis scelerisque odio dapibus.</p>
-          <div class="d-flex justify-content-start mt-3"> <a href="#">
+          <p class="text-justify">YouDriver es una empresa líder en el alquiler de autos, comprometida con la satisfacción del cliente y la excelencia en el servicio. Nos enorgullece ofrecer una amplia gama de vehículos de calidad y una experiencia de alquiler sin complicaciones para nuestros clientes.</p>
+          <p class="text-justify">En YouDriver, contamos con un equipo dedicado de profesionales apasionados por brindar la mejor experiencia posible a nuestros clientes. Nuestro equipo está comprometido con los más altos estándares de calidad y se esfuerza por superar las expectativas en cada interacción.</p>
+          <div class="d-flex justify-content-start mt-3"> <a href="{{ url('/about') }}" >
               <button class="bg-primary rounded-5 text-secondary" style="width:8rem; height: 3rem;">Leer más</button>
             </a>
           </div>

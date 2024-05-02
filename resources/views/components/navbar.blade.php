@@ -12,8 +12,8 @@
         <div class="collapse navbar-collapse " id="navbarCollapse">
             <div class="navbar-nav mx-auto">
                 <a href="{{ url('/') }}" class="nav-item nav-link text-secondary">Inicio</a>
-                <a href="#" class="nav-item nav-link text-secondary">Catalogo</a>
-                <a href="#" class="nav-item nav-link text-secondary">Sobre Nosotros</a>
+                <a href="{{ url('/catalogo') }}"class="nav-item nav-link text-secondary">Catalogo</a>
+                <a href="{{ url('/about') }}" class="nav-item nav-link text-secondary">Sobre Nosotros</a>
                 <a href="{{ url('/contact') }}" class="nav-item nav-link text-secondary ">Contacto</a>
             </div>
             <div class="navbar-nav ">
