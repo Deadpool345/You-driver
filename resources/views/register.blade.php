@@ -180,45 +180,83 @@
         <div class="d-flex justify-content-center align-items-center">
             <p class="linea3 "/>
         </div>
-            <div class="container main">
-                <div class="contenedor row">
-                    <div class="col-md-6 side-image"></div>
-                    <div class="col-md-6 right pt-5">
-                        <div class="input-box">
-                        <div class="input-field mb-3">
-                                <input type="text" class="input" id="email" required="" autocomplete="off">
-                                <label for="email">Nombre de usuario:</label> 
-                            </div> 
+            <form action="{{ route('registro') }}" method="POST">
+                @csrf
+                <div class="container main">
+                    <div class="contenedor row">
+                        <div class="col-md-6 side-image"></div>
+                        <div class="col-md-6 right pt-5">
+                            <div class="input-box">
                             <div class="input-field mb-3">
-                                <input type="text" class="input" id="email" required="" autocomplete="off">
-                                <label for="email">Email:</label> 
-                            </div> 
-                            <div class="input-field">
-                                <input type="password" class="input" id="pass" required="">
-                                <label for="pass">Contraseña:</label>
-                                <div class="container w-75 d-flex justify-content-start row ">
-                                    <p class="row mb-0 text-left">*Debe tener 8 caracteres</p>
-                                    <p class="row mb-0 text-left">*Una letra minúscula</p>
-                                    <p class="row mb-0 text-left">*Una letra mayúscula</p>
-                                    <p class="row mb-0 text-left">*Un número</p>
+                                    <input type="text" class="input @error('nombre') is-invalid @enderror" id="nombre" name="nombre" required="" autocomplete="off">
+                                    <label for="nombre">Nombre de usuario:</label>
+                                    @error('nombre')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror 
+                                </div> 
+                                <div class="input-field mb-3">
+                                    <input type="text" class="input @error('correo') is-invalid @enderror" id="correo" name="correo" required="" autocomplete="off">
+                                    <label for="correo">Email:</label>
+                                    @error('correo')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
-                            </div> 
-                            <div class="input-field mb-3">
-                                <input type="text" class="input" id="email" required="" autocomplete="off">
-                                <label for="email">Confirmar contraseña:</label> 
-                            </div> 
-                            <div class="form-field">
-                                
-                                <input type="submit" class="submit-btn" value="Registrarse">
-                            </div> 
-                            <div class="form-field">
-                            <span>¿Ya tienes cuenta?  <a href="{{ url('/login') }}">Inicia sesión aqui</a></span>
-                            </div>
-                        </div>  
+                                <div class="input-field">
+                                    <input type="password" class="input @error('contraseña') is-invalid @enderror" id="contraseña" name="contraseña" required="" onkeyup="checkPasswordStrength(this.value)">
+                                    <label for="contraseña">Contraseña:</label>
+                                    <div class="container w-75 d-flex justify-content-start row ">
+                                        <p id="length" class="row mb-0 text-left">*Debe tener 8 caracteres</p>
+                                        <p id="lowercase" class="row mb-0 text-left">*Una letra minúscula</p>
+                                        <p id="uppercase" class="row mb-0 text-left">*Una letra mayúscula</p>
+                                        <p id="number" class="row mb-0 text-left">*Un número</p>
+                                    </div>
+                                    @error('contraseña')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="input-field mt-2 mb-3">
+                                    <input type="password" class="input @error('contraseña_confirmation') is-invalid @enderror" id="contraseña_confirmation" name="contraseña_confirmation" required="" autocomplete="off">
+                                    <label for="contraseña_confirmation">Confirmar contraseña:</label>
+                                    @error('contraseña_confirmation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="form-field">
+                                    
+                                    <input type="submit" class="submit-btn" value="Registrarse">
+                                </div> 
+                                <div class="form-field">
+                                <span>¿Ya tienes cuenta?  <a href="{{ url('/login') }}">Inicia sesión aqui</a></span>
+                                </div>
+                            </div>  
+                        </div>
                     </div>
                 </div>
-            </div>
+        </form>
         </div>
+        <script>
+        function checkPasswordStrength(password) {
+            // Expresiones regulares para validar cada requisito
+            var lengthRegex = /.{8,}/;
+            var lowercaseRegex = /[a-z]/;
+            var uppercaseRegex = /[A-Z]/;
+            var numberRegex = /[0-9]/;
+
+            // Validar cada requisito y cambiar el color del texto correspondiente
+            document.getElementById("length").style.color = lengthRegex.test(password) ? "green" : "red";
+            document.getElementById("lowercase").style.color = lowercaseRegex.test(password) ? "green" : "red";
+            document.getElementById("uppercase").style.color = uppercaseRegex.test(password) ? "green" : "red";
+            document.getElementById("number").style.color = numberRegex.test(password) ? "green" : "red";
+        }
+        </script>
 
     @include('components.footer')
 </body>

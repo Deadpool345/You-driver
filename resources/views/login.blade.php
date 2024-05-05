@@ -181,15 +181,17 @@
         <div class="contenedor row">
             <div class="col-md-6 side-image"></div>
             <div class="col-md-6 right pt-5">
+                <form action="{{ route('login') }}" method="POST" >
+                @csrf
                 <div class="input-box">
                 <h3 class="text-center mb-5">¡Bienvenido de vuelta!</h3>
                 <div class="input-field mb-3">
-                        <input type="text" class="input" id="email" required="" autocomplete="off">
-                        <label for="email">Nombre de usuario:</label> 
+                        <input type="text" class="input" id="correo" name="correo" required="" autocomplete="off">
+                        <label for="correo">Correo electrónico:</label>
                     </div> 
                     <div class="input-field">
-                        <input type="password" class="input" id="pass" required="">
-                        <label for="pass">Contraseña:</label>
+                        <input type="password" class="input" id="password" name="password" required="">
+                        <label for="password">Contraseña:</label>
                     
                     </div> 
                     <div class="form-field">
@@ -200,7 +202,17 @@
                     <span><a href="{{ url('/restablecercontra') }}">¿Olvidaste la contraseña?</a></span>
                     </div>
                 </div>  
+                </form>
             </div>
+            @if ($errors->any())
+                <div class="bg-danger" role="alert">
+                    <ul >
+                        @foreach ($errors->all() as $error)
+                            <li class="">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
         </div>
     </div>
 
@@ -208,4 +220,3 @@
 </body>
 
 </html>
-y
