@@ -44,6 +44,12 @@
     Route::get('/dashboard', function () {
         return view('dashboard');
     });
+
+    Route::get('/panel', function () {
+        return view('paneladmin');
+    });
+
+    
     
 
     //manejo de formularios
