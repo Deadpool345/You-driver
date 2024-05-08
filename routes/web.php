@@ -2,6 +2,7 @@
 
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\LoginController;
+    use App\Http\Controllers\RentaController;
     /*
     |--------------------------------------------------------------------------
     | Web Routes
@@ -49,6 +50,13 @@
         return view('paneladmin');
     });
 
+    Route::get('/renta/{name_car}', function($name_car) {
+        return "Bienvenido a la web renta de autos " .$name_car;
+    });
+
+    Route::get('users/{id}', function ($id) {
+        
+    });
     
     
 
@@ -63,4 +71,7 @@
 
     
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    //manejo de renta de autos
+    Route::get('/renta', [RentaController::class,'index']);
     
